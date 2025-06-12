@@ -1,58 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - Cloud Engineer</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: #ffffff;
-            text-align: center;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #e0e0e0;
-        }
-        h2 {
-            font-size: 1.5em;
-            color: #ffd700;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            padding: 0 20px;
-        }
-        .bio {
-            margin-top: 20px;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 15px;
-            border-radius: 5px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .bg-gradient {
+      background: linear-gradient(135deg, #a2d5f2, #e0c3fc);
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Oyindamola Duyile</h1>
-        <h2>Cloud Engineer</h2>
-        <h2>Project: The Future of AI Telemedicine</h2>
-        <div class="bio">
-            <p><strong>Professional Bio:</strong> I am a dedicated Cloud Engineer with expertise in deploying scalable infrastructure, automating workflows, and integrating AI solutions. My skills include AWS, Docker, Kubernetes, and Python scripting. Past projects include building a cloud-based telemedicine platform and optimizing server performance for high-traffic applications. I hold a degree in Computer Science from [Your University] and certifications in AWS Solutions Architect and Kubernetes Administration.</p>
-        </div>
+<body class="bg-gradient min-h-screen flex items-center justify-center">
+  <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-4xl text-center relative">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-2xl font-bold text-gray-800">😊Wellness</h1>
+      <button class="bg-red-500 text-white px-3 py-1 rounded">Subscribe</button>
     </div>
+    <nav class="mb-6">
+      <a href="#" class="text-gray-600 mx-2 hover:text-gray-800">Home</a>
+      <a href="#" class="text-gray-600 mx-2 hover:text-gray-800">About</a>
+      <a href="#" class="text-gray-600 mx-2 hover:text-gray-800">Contact</a>
+    </nav>
+    <div class="flex flex-col md:flex-row items-center justify-between">
+      <div class="mb-6 md:mb-0">
+        <h2 class="text-4xl font-bold text-gray-900 fade-in">We Focus on</h2>
+        <h1 class="text-5xl font-extrabold text-blue-600 fade-in">The Future of AI-Powered Telemedicine!</h1>
+        <p class="text-gray-600 mt-4 fade-in">Our project is transforming healthcare access through AI-powered telemedicine. 
+            By streamlining patient-provider connections, we reduce consultation wait times by 30% and significantly lower operational costs. 
+            Leveraging real-time data, our platform intelligently matches patients with the right specialists, ensuring fast, efficient, and personalized care. 
+            Join us in shaping the future of intelligent, accessible healthcare!
+        </p>
+
+        <h2 class="text-4xl font-bold text-gray-900 fade-in">About Me </h2>
+        <p class="text-gray-600 mt-4 fade-in">I am Oyindamola Duyile, the Lead Engineer for this project.I am a dedicated 
+            Cloud Engineer with expertise in deploying scalable infrastructure, automating workflows, and integrating AI solutions.  
+            I hold a Diploma in Cloud Engineering at Altschool Africa. I have worked on several projects including running Kubernetes
+            clusters for fintech startups helping to cut about 20% in cloud expenses. I am proficient in Linux, Bash Scirpting, 
+            Python, Web development and deployment. I am also skilled in system administration including database management.
+        </p>
+
+        <div class="mt-6">
+          <input type="email" placeholder="Email address" class="p-2 border rounded-l">
+          <button class="bg-blue-500 text-white p-2 rounded-r">Get Consulting</button>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="bg-yellow-300 rounded-full w-64 h-64 flex items-center justify-center">
+          <img src="image1.png" alt="Profile" class="rounded-full">
+        </div>
+      </div>
+    </div>
+    
+   <div class="mt-6 flex justify-center space-x-4">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" class="h-6 w-6">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" class="h-6 w-6">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="h-6 w-6">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="h-6 w-6">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" class="h-6 w-6">
+</div>
+
+    <p class="text-gray-500 mt-4">We are trusted by over 500+ big and small agencies</p>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.style.opacity = 1;
+        }, index * 300);
+      });
+    });
+  </script>
 </body>
-</html> 
+</html>
