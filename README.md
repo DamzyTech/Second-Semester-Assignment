@@ -24,7 +24,7 @@ As part of the second semester assessment, I was tasked with provisioning a Linu
   cd second_semester_exam
 
 ## 2. Web Server Setup (Nginx)
-I chose Nginx as the web server and installed it with the following steps:
+- I chose Nginx as the web server and installed it with the following steps:
 
 1. sudo apt update
 2. sudo apt install nginx -y
@@ -32,23 +32,33 @@ I chose Nginx as the web server and installed it with the following steps:
 4. sudo systemctl enable nginx
 5. sudo systemctl status nginx
 
-Opened a browser and visited my server’s public IP:
+- Opened a browser and visited my server’s public IP:
 http://18.130.178.12/
-The default Nginx welcome page confirmed a successful installation.
+- The default Nginx welcome page confirmed a successful installation.
 
 ## 3. Deployment
 ### Landing Page Development
-Developed a landing page for an AI healthtech startup called "Wellness".
-The landing page includes:
+- Developed a landing page for an AI healthtech startup called "Wellness".
+- The landing page includes:
 1. A navbar and footer
 2. Social media icons
 3. A short pitch for the startup
 4. A professional bio highlighting my skills and background
 5. Styled using CSS and Tailwind CSS for a clean, modern look.
 ### GitHub Integration
-Initialized a Git repository locally and pushed the project to GitHub using the following commands:
+- Initialized a Git repository locally and pushed the project to GitHub using the following commands:
 1. git init
 2. git add .
 3. git commit -m "Initial commit"
-4. git remote add origin git@github.com:username/repo-name.git
+4. git remote add origin 
 5. git push -u origin master
+### Deploying to the Server
+- SSH’ed back into the AWS Linux server.
+- Cloned the GitHub repository:
+git clone 
+cd 
+- Copied the index.html file to Nginx’s default web directory: "sudo cp index.html /var/www/html/"
+- Then I visited http://18.130.178.12/ again and confirmed that my landing page was successfully deployed
+### 🌍 Live Page
+- 🔗 URL: http://18.130.178.12
+### Screenshot of Deployed Page
