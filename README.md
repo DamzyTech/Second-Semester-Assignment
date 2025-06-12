@@ -1,33 +1,54 @@
-## This Readme shall explain the steps I took to acheive the project (Server setup, web server, and deployment)
+# Cloud Engineering Second Semester Project – AltSchool Tinyuka 2024
 
-### Server Setup
-- I used AWS for this project. Created a new EC2 instance which I titled "MY Web Server". I allowed inbound traffic into port 22 (SSH), port 80 (http) and port 443 (https)
-- Next, I SSh into the server from my VScode terminal having already created a Key Pair.
-- Inside the terminal I created a folder which I called "second_semester_exam".
+This README documents the steps I followed to complete the Cloud Engineering second semester project, including server provisioning, web server setup, and deployment of a dynamic landing page.
 
-### Web Server Setup
-- Next is setting up a web server, I chose Nginx.
-- I ran the following codes to install Nginx on the machine
+---
 
-    1. sudo apt update
-    2. sudo apt install nginx
-    3. sudo systemctl start nginx
-    4. sudo systemctl enable nginx
-    5. sudo systemctl status nginx
-- I opened a web browser and enter my server’s IP address (http://18.130.178.12/). I saw the default Nginx welcome page which confirmed that installation and configuration work well.
+## Project Overview
 
-### Deployment
-- I created an index.html file on my local machine. In the file I created a landing page for an AI healthtech startup compnay called "Wellness". I added a few extra features like a nav bar, footer, and social media links. I styled the webpage using CSS and Tailwind CSS to make it more beautiful. I added a section where I spoke about myself, my experience and expertise.
-- I initialized git, created an SSH key which I used to connect with my github account.
-- I created a github repository and then pushed the index.html file from my local machine to the github repo using the following commands
-    1. git init
-    2. git status
-    3. git add .
-    4. git commit
-    5. git push origin master
-- I logged into my AWS linux server, I cloned the repository (Having done SSH connections)
-- Now I have the index.html on my AWS linux server.
-- I now copied the index.html file to the nginx default index.html to replace it. I used the command
-        "sudo cp index.html /var/www/html/"
-- I entered my server's IP address (http://18.130.178.12/), and it displayed the content below:
-  <img width="947" alt="image" src="https://github.com/user-attachments/assets/12974cfc-4a63-4967-b2a7-32c5422ea014" />
+As part of the second semester assessment, I was tasked with provisioning a Linux server, configuring a web server, and deploying a dynamic, styled landing page to showcase a startup idea.
+
+---
+
+## 1. Server Setup (AWS EC2)
+
+- I used **Amazon Web Services (AWS)** to provision a new EC2 instance titled **"MY Web Server"**.
+- Configured **inbound traffic rules** to allow:
+  - Port 22 (SSH)
+  - Port 80 (HTTP)
+  - Port 443 (HTTPS)
+- Generated an SSH key pair and connected to the instance via **VS Code terminal**.
+- Once connected, I created a working directory:
+  ```bash
+  mkdir second_semester_exam
+  cd second_semester_exam
+
+## 2. Web Server Setup (Nginx)
+I chose Nginx as the web server and installed it with the following steps:
+
+1. sudo apt update
+2. sudo apt install nginx -y
+3. sudo systemctl start nginx
+4. sudo systemctl enable nginx
+5. sudo systemctl status nginx
+
+Opened a browser and visited my server’s public IP:
+http://18.130.178.12/
+The default Nginx welcome page confirmed a successful installation.
+
+## 3. Deployment
+### Landing Page Development
+Developed a landing page for an AI healthtech startup called "Wellness".
+The landing page includes:
+1. A navbar and footer
+2. Social media icons
+3. A short pitch for the startup
+4. A professional bio highlighting my skills and background
+5. Styled using CSS and Tailwind CSS for a clean, modern look.
+### GitHub Integration
+Initialized a Git repository locally and pushed the project to GitHub using the following commands:
+1. git init
+2. git add .
+3. git commit -m "Initial commit"
+4. git remote add origin git@github.com:username/repo-name.git
+5. git push -u origin master
