@@ -56,7 +56,6 @@ http://18.130.178.12/
 - SSH’ed back into the AWS Linux server.
 - Cloned the GitHub repository:
 git clone 
-cd 
 - Copied the index.html file to Nginx’s default web directory: "sudo cp index.html /var/www/html/"
 - Then I visited http://18.130.178.12/ again and confirmed that my landing page was successfully deployed
 ### 🌍 Live Page
