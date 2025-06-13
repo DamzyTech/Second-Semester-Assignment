@@ -61,4 +61,4 @@ git clone
 ### 🌍 Live Page
 - 🔗 URL: http://18.130.178.12
 ### Screenshot of Deployed Page
-<img width="953" alt="image" src="https://github.com/user-attachments/assets/6b89bc01-101a-4be3-8391-0e9cf6099481" />
+<img width="953" alt="image" src="https://github.com/user-attachments/assets/4bff055e-2324-4021-ad9e-66afb1047337" />
